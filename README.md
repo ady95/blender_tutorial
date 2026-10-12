@@ -2,6 +2,8 @@
 
 위키독스 책 「블렌더 AI 자동화 따라하기 (AI 에이전트와 오픈소스로 시작하는 3D 영상 제작 자동화)」의 예제 코드 저장소입니다.
 
+<a href="https://wikidocs.net/book/21559"><img src="assets/cover.png" alt="블렌더 AI 자동화 따라하기 표지" width="300"></a>
+
 - 책: [https://wikidocs.net/book/21559](https://wikidocs.net/book/21559)
 - 기준 버전: **Blender 5.2.2 LTS**
 - 실측 환경: Windows 11 / GTX 1080 8GB(01·02장), RTX 3090 24GB(03장~) — 렌더링 시간은 GPU에 따라 다릅니다

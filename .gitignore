@@ -5,6 +5,7 @@
 render/
 *.mp4
 *.png
+!assets/*.png
 
 # Python·OS
 __pycache__/
