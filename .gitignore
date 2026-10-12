@@ -1,0 +1,12 @@
+# Blender 결과물·백업
+*.blend
+*.blend1
+*.blend2
+render/
+*.mp4
+*.png
+
+# Python·OS
+__pycache__/
+.DS_Store
+Thumbs.db
