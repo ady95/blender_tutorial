@@ -4,7 +4,7 @@
 
 - 책: [https://wikidocs.net/book/21559](https://wikidocs.net/book/21559)
 - 기준 버전: **Blender 5.2.2 LTS**
-- 실측 환경: Windows 11 / GTX 1080 8GB (렌더링 시간은 GPU에 따라 다릅니다)
+- 실측 환경: Windows 11 / GTX 1080 8GB(01·02장), RTX 3090 24GB(03장~) — 렌더링 시간은 GPU에 따라 다릅니다
 
 ## 폴더 구성
 
@@ -17,14 +17,21 @@
 | `02/prompts/` | `1_create_scene.txt` | AI에게 코드를 요청한 프롬프트 | 02-1 |
 | | `2_revise_metal_dolly.txt` | 1차 수정 요청 (금속 반사, 카메라 돌리 인) | 02-4 |
 | | `3_restore_mood.txt` | 2차 수정 요청 (어두운 분위기 복원) | 02-4 |
+| `03/` | `glass_compare.py` | 유리 재질 렌더링 비교 (EEVEE 기본·레이트레이싱·Cycles) | 03-2 |
+| | `lighting_compare.py` | 조명 방식(Point·3점 조명·HDRI)과 초점 거리(24·50·85mm) 비교 | 03-3 |
 
 ## 실행 방법
 
-### 명령줄에서 실행 (01/gpu_check.py)
+### 명령줄에서 실행 (01/gpu_check.py, 03/*.py)
+
+저장소 폴더에서 실행합니다.
 
 ```bash
 "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python 01/gpu_check.py
+"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python 03/glass_compare.py
 ```
+
+03장 스크립트의 결과 이미지는 `render/03/` 폴더에 저장됩니다.
 
 ### Blender 안에서 실행 (02/first_animation.py)
 
