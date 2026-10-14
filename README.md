@@ -64,7 +64,7 @@ Blender MCP를 연결한 Claude Code 등 MCP 클라이언트에 그대로 붙여
 ## 주의
 
 - 예제는 Blender 5.2 기준입니다. Blender 4.x 이하에서는 API 차이로 동작하지 않을 수 있습니다 (책 02-2 참고).
-- 한국어 UI에서는 **Edit → Preferences → Interface → Translation**의 New Data 번역을 끄는 것을 권장합니다 (책 01-4 참고).
+- 한국어 UI에서는 **Edit → Preferences → Interface → Language** 패널의 Translate → New Data(한국어 UI에서는 '새로운 데이터')를 끄는 것을 권장합니다 (책 01-4 참고).
 
 ## 라이선스
 

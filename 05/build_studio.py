@@ -70,6 +70,8 @@ if default is not None:
         ob = default.objects.get(name)
         if ob is not None:
             bpy.data.objects.remove(ob, do_unlink=True)
+    if not default.all_objects:            # 비어 있으면 기본 컬렉션도 지움
+        bpy.data.collections.remove(default)
 
 # ---------- 컬렉션 ----------
 studio = get_collection("Studio")
