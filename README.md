@@ -26,25 +26,28 @@
 | | `2_structured_perfume.txt` | 구조화 프롬프트 (향수병 광고) | 05-3 |
 | | `3_checklist_loop.txt` | 체크리스트 검수 반복 프롬프트 (책상 정물) | 05-4 |
 | | `4_studio_template.txt` | 스튜디오 템플릿 프롬프트 | 05-5 |
+| | `5_studio_cli_script.txt` | 명령줄용 재현 스크립트 요청 (후속 요청) | 05-5 |
 
 ## 실행 방법
 
 ### 명령줄에서 실행 (01/gpu_check.py, 03/*.py, 05/build_studio.py)
 
-저장소 폴더에서 실행합니다.
+이 저장소 폴더에서 PowerShell을 열고 실행합니다. PowerShell에서는 따옴표로 감싼 경로 앞에 `&`를 붙여야 합니다(명령 프롬프트 cmd에서는 `&` 없이).
 
-```bash
-"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python 01/gpu_check.py
-"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python 03/glass_compare.py
+```powershell
+& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python .\01\gpu_check.py
+& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python .\03\glass_compare.py
 ```
 
 03장 스크립트의 결과 이미지는 `render/03/` 폴더에 저장됩니다.
 
 05장 스튜디오 스크립트는 `--` 뒤에 파일 이름을 주면 장면을 blend 파일로 저장합니다.
 
-```bash
-"C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python 05/build_studio.py -- studio_template.blend
+```powershell
+& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b --factory-startup --python .\05\build_studio.py -- .\studio_template.blend
 ```
+
+Linux에서는 Blender 실행 파일 경로만 바꿔 같은 옵션으로 실행합니다(예: `~/blender/blender-5.2.2-linux-x64/blender -b --factory-startup --python 01/gpu_check.py`).
 
 ### Blender 안에서 실행 (02/first_animation.py)
 
